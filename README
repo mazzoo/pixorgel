@@ -2,7 +2,7 @@
 
    public domain
 
-   QnD hack to flood pixelflut with an virtuel X framebuffer display.
+   QnD hack to flood pixelflut with an virtual X framebuffer display.
    start an virtual X server like
    Xvfb :1 -screen 0 256x256x24 -fbdir /var/tmp
 

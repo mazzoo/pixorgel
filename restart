@@ -1,0 +1,5 @@
+#!/bin/bash
+# watch me
+for i in $(seq 10 ); do
+    ./pixorgel 94.45.232.48 1234 &
+done

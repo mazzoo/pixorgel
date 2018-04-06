@@ -1,0 +1,23 @@
+   pixorgel - eh18 edition
+
+   public domain
+
+   QnD hack to flood pixelflut with an virtuel X framebuffer display.
+   start an virtual X server like
+   Xvfb :1 -screen 0 256x256x24 -fbdir /var/tmp
+
+   in that X start anything, e.g. xlock
+   ./xlock/xlock -nolock -duration 13 -display :1
+   or some relevant video
+   DISPLAY=':1' mpv -fs -loop 0 https://www.youtube.com/embed/oHg5SJYRHA0
+
+   then start pixorgel a few times (as many connections are allowed)
+   watch -n 30 ./restart
+   with
+   cat ./restart
+    #!/bin/bash
+    # watch me
+    for i in $(seq 10 ); do
+        ./pixorgel 94.45.232.48 1234 &
+    done
+
